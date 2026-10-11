@@ -3,14 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "OPENWORK_DEV_MODE=1 next dev --hostname 0.0.0.0",
+    "dev": "node init && OPENWORK_DEV_MODE=1 next dev --hostname 0.0.0.0",
     "check:agent-links": "node scripts/check-agent-links.mjs",
     "eval:agents": "node scripts/agent-discovery-eval.mjs",
     "prices:update": "node scripts/update-model-prices.mjs",
     "plain:setup-fields": "node scripts/setup-plain-feedback-fields.mjs",
     "prebuild": "pnpm --dir ../../../packages/ui build && node ../../../scripts/check-connect-installer-parity.mjs && node scripts/copy-bootstrap-cli.mjs",
-    "build": "next build",
-    "start": "next start --hostname 0.0.0.0",
+    "build": "node init && next build",
+    "start": "node init && next start --hostname 0.0.0.0",
     "lint": "next lint"
   },
   "dependencies": {

@@ -14,7 +14,7 @@
     }
   },
   "scripts": {
-    "build": "tsup",
+    "build": "node init && tsup",
     "typecheck": "tsc -p tsconfig.json --noEmit --pretty false",
     "test:live": "tsx --test --test-concurrency=1 src/live.test.ts",
     "test": "tsx --test src/unit.test.ts"

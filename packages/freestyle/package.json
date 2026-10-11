@@ -18,6 +18,6 @@
     "@openwork/sandbox-freestyle": "workspace:*"
   },
   "scripts": {
-    "build": "pnpm --filter \"@openwork/freestyle^...\" --if-present run build"
+    "build": "node init && pnpm --filter \"@openwork/freestyle^...\" --if-present run build"
   }
 }

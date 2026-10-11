@@ -3,11 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "OPENWORK_DEV_MODE=1 NEXT_PUBLIC_POSTHOG_KEY= NEXT_PUBLIC_POSTHOG_API_KEY= next dev --hostname 0.0.0.0 --port 3005",
-    "dev:local": "OPENWORK_DEV_MODE=1 NEXT_PUBLIC_POSTHOG_KEY= NEXT_PUBLIC_POSTHOG_API_KEY= next dev --hostname ${DEN_WEB_HOST:-0.0.0.0} --port ${DEN_WEB_PORT:-3005}",
+    "dev": "node init && OPENWORK_DEV_MODE=1 NEXT_PUBLIC_POSTHOG_KEY= NEXT_PUBLIC_POSTHOG_API_KEY= next dev --hostname 0.0.0.0 --port 3005",
+    "dev:local": "node init && OPENWORK_DEV_MODE=1 NEXT_PUBLIC_POSTHOG_KEY= NEXT_PUBLIC_POSTHOG_API_KEY= next dev --hostname ${DEN_WEB_HOST:-0.0.0.0} --port ${DEN_WEB_PORT:-3005}",
     "prebuild": "pnpm --filter @openwork/types build && pnpm --dir ../../../packages/ui build && pnpm --dir ../../packages/utils build",
-    "build": "next build",
-    "start": "next start --hostname 0.0.0.0 --port 3005",
+    "build": "node init && next build",
+    "start": "node init && next start --hostname 0.0.0.0 --port 3005",
     "lint": "eslint app components --no-inline-config --max-warnings=0",
     "typecheck": "tsc --noEmit --pretty false",
     "typecheck:gateway-usage-limits": "tsc --noEmit --pretty false -p tsconfig.usage-limits.json"

@@ -39,7 +39,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "build": "tsup",
+    "build": "node init && tsup",
     "test": "node --test src/*.test.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },

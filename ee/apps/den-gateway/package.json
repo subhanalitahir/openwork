@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "NODE_OPTIONS=--conditions=development OPENWORK_DEV_MODE=1 tsx watch src/server.ts",
-    "dev:local": "NODE_OPTIONS=--conditions=development OPENWORK_DEV_MODE=1 PORT=${DEN_GATEWAY_PORT:-8788} tsx watch src/server.ts",
-    "build": "node build.mjs",
-    "start": "node dist/server.js"
+    "dev": "node init && NODE_OPTIONS=--conditions=development OPENWORK_DEV_MODE=1 tsx watch src/server.ts",
+    "dev:local": "node init && NODE_OPTIONS=--conditions=development OPENWORK_DEV_MODE=1 PORT=${DEN_GATEWAY_PORT:-8788} tsx watch src/server.ts",
+    "build": "node init && node build.mjs",
+    "start": "node init && node dist/server.js"
   },
   "dependencies": {
     "@hono/node-server": "2.0.12",
