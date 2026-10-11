@@ -17,7 +17,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --clean --external zod --target es2022",
+    "build": "node init && tsup src/index.ts --format esm --dts --clean --external zod --target es2022",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {

@@ -18,9 +18,12 @@
       "default": "./dist/remote-client.js"
     }
   },
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "node init && tsc -p tsconfig.build.json",
     "test": "node --test test/*.test.ts",
     "test:built": "node --test test/built.test.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit"

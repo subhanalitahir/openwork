@@ -103,7 +103,7 @@
     }
   },
   "scripts": {
-    "build": "tsup",
+    "build": "node init && tsup",
     "test": "node --test src/*.test.ts"
   },
   "dependencies": {

@@ -13,7 +13,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "node scripts/build-apps.mjs",
+    "build": "node init && node scripts/build-apps.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
