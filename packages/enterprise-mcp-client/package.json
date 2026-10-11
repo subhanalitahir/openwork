@@ -16,7 +16,7 @@
     "src"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "node init && tsup",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {

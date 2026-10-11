@@ -204,7 +204,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "node init && tsup"
   },
   "dependencies": {
     "@openwork/managed-deployments": "workspace:*",

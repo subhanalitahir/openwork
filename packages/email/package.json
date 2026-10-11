@@ -20,8 +20,8 @@
     "emails"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "email dev --dir emails"
+    "build": "node init && tsup",
+    "dev": "node init && email dev --dir emails"
   },
   "dependencies": {
     "@react-email/components": "^1.0.12",

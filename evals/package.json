@@ -8,7 +8,7 @@
     "test:e2e": "vitest run --config vitest.config.ts --project e2e",
     "artifacts:index": "node packages/test-artifacts/bin/artifact-index.mjs",
     "artifacts:publish": "node packages/test-artifacts/bin/publish-pr.mjs",
-    "dev:den": "node scripts/dev-den.ts",
+    "dev:den": "node init && node scripts/dev-den.ts",
     "docs:shots": "node docs-shots/run.ts",
     "evidence:judge": "node packages/test-evidence/bin/test-evidence-judge.mjs",
     "design:review": "node packages/test-evidence/bin/test-evidence-design-review.mjs",

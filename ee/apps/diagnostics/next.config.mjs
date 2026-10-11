@@ -8,4 +8,4 @@ const nextConfig = {
   outputFileTracingRoot: path.join(directory, "../../.."),
 }
 
-export default nextConfig
+export default nextConfig;
